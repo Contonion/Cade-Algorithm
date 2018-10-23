@@ -6,34 +6,48 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Algorithm View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cade_Algorithm" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="AlgorithmViewController" customModule="Cade_Algorithm" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ajD-J1-tdl">
-                                <rect key="frame" x="0.0" y="58" width="375" height="609"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2l-LQ-0kp">
-                                <rect key="frame" x="166" y="20" width="42" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello World!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M2l-LQ-0kp">
+                                <rect key="frame" x="16" y="20" width="343" height="88"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="3Ez-GA-Pvl"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ajD-J1-tdl">
+                                <rect key="frame" x="16" y="116" width="343" height="531"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="ajD-J1-tdl" firstAttribute="width" secondItem="M2l-LQ-0kp" secondAttribute="width" id="MBn-Hg-gm8"/>
+                            <constraint firstAttribute="bottom" secondItem="ajD-J1-tdl" secondAttribute="bottom" constant="20" symbolic="YES" id="6PO-ik-Pgs"/>
+                            <constraint firstItem="M2l-LQ-0kp" firstAttribute="leading" secondItem="ajD-J1-tdl" secondAttribute="leading" id="ETk-0J-mjv"/>
+                            <constraint firstItem="M2l-LQ-0kp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LjS-wH-Dat"/>
+                            <constraint firstItem="M2l-LQ-0kp" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="bQU-cW-itf"/>
+                            <constraint firstItem="ajD-J1-tdl" firstAttribute="top" secondItem="M2l-LQ-0kp" secondAttribute="bottom" constant="8" symbolic="YES" id="e8g-Bk-eFz"/>
+                            <constraint firstItem="M2l-LQ-0kp" firstAttribute="trailing" secondItem="ajD-J1-tdl" secondAttribute="trailing" id="f5g-FH-ocG"/>
+                            <constraint firstItem="M2l-LQ-0kp" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="nNO-Kg-UgE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="AlgorithmLable" destination="M2l-LQ-0kp" id="eaL-77-UsL"/>
+                        <outlet property="swiftImage" destination="ajD-J1-tdl" id="poh-7P-Y6G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
