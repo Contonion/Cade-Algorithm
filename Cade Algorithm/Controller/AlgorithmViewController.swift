@@ -26,15 +26,15 @@ public class AlgorithmViewController : UIViewController
         let stepFive : String = "Fifth, you are going to want to add components to your main.storyboard, by hitting the object library, and simply dragging components into the box, this is what your app will look like."
         let stepSix : String = "Finally, Code away!"
         let algorithm = [stepOne, stepTwo, stepThree, stepFour, stepFive, stepSix]
-        let attributesDictionary = [NSAttributedStringKey.font : algorithmLable.font]
-        let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary)
+        let attributesDictionary = [NSAttributedString.Key.font : algorithmLable.font]
+        let fullAttributedString = NSMutableAttributedString(string: title, attributes: attributesDictionary as [NSAttributedString.Key : Any])
         
         for step in algorithm {
             let bullet : String = "🤓"
             let formattedStep : String = "\n\(bullet) \(step)"
             let attributedStringStep : NSMutableAttributedString = NSMutableAttributedString(string : formattedStep)
             let outlineStyle = createOutlineStyle()
-            attributedStringStep.addAttributes([NSAttributedStringKey.paragraphStyle : outlineStyle], range: NSMakeRange(0,attributedStringStep.length))
+            attributedStringStep.addAttributes([NSAttributedString.Key.paragraphStyle : outlineStyle], range: NSMakeRange(0,attributedStringStep.length))
             fullAttributedString.append(attributedStringStep)
         }
         algorithmLable.attributedText = fullAttributedString
